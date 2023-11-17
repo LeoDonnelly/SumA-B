@@ -1,21 +1,19 @@
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class SumAB { 
 	public static void main(String[] args) {  
 	    
 		int total = 0;
-		Scanner num = new Scanner(System.in); 
-		System.out.println("How many numbers would you like to add together? ");
-		int loop = num.nextInt();
+		
+		String loopasstring = JOptionPane.showInputDialog("Enter how many numbers you would like to add together: ");
+		
+		int loop = Integer.parseInt(loopasstring);
 		for(int i = 0;i < loop;i++) {
-			Scanner input = new Scanner(System.in);
-			System.out.println("Enter a number to add:  ");
-			int a = input.nextInt();
+			String numberA = JOptionPane.showInputDialog("Enter a number to add: ");
+			int a = Integer.parseInt(numberA);
 			total +=a;
 		}
-		
-		System.out.println("The total of the numbers you inputed is "+total);
+
 	    JOptionPane.showMessageDialog(null, "The total of the numbers you inputted is " + total);
 
 
